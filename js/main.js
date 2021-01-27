@@ -9,11 +9,11 @@ In questo caso dovete modificare l'html (semplificarlo di molto!) perché ora ci
 Step1
 creare oggetto immagini, √
 step2
-creare click avanti e indieto
+creare click avanti e indietro √
 step3
-al click avanti cambiare foto e al click indietro tornare
+al click avanti cambiare foto e al click indietro tornare √
 step4
-al termine delle foto ricominciare o dalla prima o dall'ultima
+al termine delle foto ricominciare o dalla prima o dall'ultima √
 step5
 creare pallini
 step6
@@ -30,6 +30,7 @@ var app = new Vue({
       'https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg',
     ],
     imageID: 0,
+    
 
 
 
@@ -52,6 +53,9 @@ var app = new Vue({
       }else {
         return this.imageID = 0;
       }
+    },
+    isDotActive: function (i){
+      return i === this.imageID;
     }
 
   }
