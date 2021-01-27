@@ -38,7 +38,10 @@ var app = new Vue({
   },
   methods:{
     prevClick: function(){
-
+      return this.imageID -= 1
+    },
+    nextClick: function(){
+      return this.imageID += 1
     }
 
   }

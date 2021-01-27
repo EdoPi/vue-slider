@@ -12,7 +12,7 @@
     <body>
         <div id="app" class="container">
             <div class="slider-wrapper">
-                <div @click class="prev">
+                <div @click="prevClick" class="prev">
                     <i class="fas fa-angle-left"></i>
                 </div>
                 <div class="images">
@@ -21,7 +21,7 @@
                     <img :src="immagini[imageID]" alt="">
                     <img class="last" :src="immagini[imageID]" alt="">
                 </div>
-                <div @click class="next">
+                <div @click="nextClick" class="next">
                     <i class="fas fa-angle-right"></i>
                 </div>
                 <div class="nav">
