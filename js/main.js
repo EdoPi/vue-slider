@@ -35,13 +35,23 @@ var app = new Vue({
 
 
 
+
   },
   methods:{
     prevClick: function(){
-      return this.imageID -= 1
+      if (this.imageID > 0) {
+        return this.imageID -= 1;
+      }else {
+        return this.imageID = this.immagini.length - 1;
+      }
+
     },
     nextClick: function(){
-      return this.imageID += 1
+      if (this.imageID < this.immagini.length - 1) {
+        return this.imageID += 1;
+      }else {
+        return this.imageID = 0;
+      }
     }
 
   }
